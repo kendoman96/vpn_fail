@@ -1,5 +1,5 @@
 #!/bin/bash
-# Event handler for VPN failure on hermes
+# Event handler for VPN failure
 
 case "$1" in
 OK)
@@ -19,7 +19,7 @@ CRITICAL)
 
         HARD)
                 echo -n "shits fucked bruv"
-                transmission-remote 192.168.1.101:9091 --auth ghost:passwordbackwards -t all --stop
+                transmission-remote 192.168.1.101:9091 --auth user:password -t all --stop
                 ;;
         esac
         ;;
